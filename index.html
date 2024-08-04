@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to TON Vault TEST</h1>
+    </header>
+    <main>
+        <p>Pookie?</p>
+        <!-- Добавляем кнопку для подключения кошелька -->
+        <div id="ton-connect"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    <script type="module">
+        import { TonConnectUI } from 'https://cdn.jsdelivr.net/npm/@tonconnect/ui@2.0.6/+esm';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('TonConnectUI:', typeof TonConnectUI);
+
+            if (typeof TonConnectUI !== 'undefined') {
+                try {
+                    const tonConnectUI = new TonConnectUI({
+                        manifestUrl: 'http://127.0.0.1:5500/tonconnect-manifest.json',
+                        buttonRootId: 'ton-connect'
+                    });
+
+                    console.log('TON Connect UI initialized');
+
+                    tonConnectUI.uiOptions = {
+                        twaReturnUrl: 'http://127.0.0.1:5500'
+                    };
+
+                } catch (error) {
+                    console.error('Failed to initialize TON Connect UI:', error);
+                }
+            } else {
+                console.error('TonConnectUI is not defined. Please check the library URL.');
+            }
+        });
+    </script>
+</body>
+</html>

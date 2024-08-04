@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('http://127.0.0.1:5500/images/2.jpg'); /* Путь к вашей картинке */
+    background-size: contain; /* Изображение полностью помещается в фон */
+    background-repeat: no-repeat; /* Картинка не повторяется */
+    background-position: center center; /* Центрирование картинки */
+    height: 100vh; /* Высота окна просмотра */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    background-color: white; /* Белый фон */
+    text-align: center;
+    padding: 1em 0;
+    width: 100%; /* Ширина 100% */
+    position: relative; /* Относительное позиционирование */
+    z-index: 1; /* Поверх фона */
+}
+
+main {
+    padding: 1em;
+    flex: 1; /* Занимает оставшееся пространство */
+    position: relative; /* Относительное позиционирование */
+    z-index: 1; /* Поверх фона */
+}
+
+/* Стили для кнопки подключения кошелька */
+#ton-connect {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Убедимся, что кнопка находится над другими элементами */
+}
