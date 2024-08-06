@@ -34,7 +34,11 @@
                     console.log('TON Connect UI initialized');
 
                     tonConnectUI.uiOptions = {
-                        twaReturnUrl: 'https://hoodrichbadass.github.io/website/'
+                        twaReturnUrl: 'https://hoodrichbadass.github.io/website/',
+                        actionsConfiguration: {
+                            returnStrategy: 'none', // No return after user action, for better compatibility
+                            skipRedirectToWallet: 'ios' // Avoids redirect issues on iOS
+                        }
                     };
 
                 } catch (error) {
