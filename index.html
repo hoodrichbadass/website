@@ -18,16 +18,17 @@
         <p>&copy; 2024 My Website</p>
     </footer>
     <script type="module">
-        import { TonConnectUIProvider, THEME } from 'https://cdn.jsdelivr.net/npm/@tonconnect/ui@2.0.6/+esm';
+        import { TonConnectUI } from 'https://cdn.jsdelivr.net/npm/@tonconnect/ui@2.0.6/+esm';
 
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('TonConnectUI:', typeof TonConnectUIProvider);
+        document.addEventListener('DOMContentLoaded', async function() {
+            console.log('TonConnectUI:', typeof TonConnectUI);
 
-            if (typeof TonConnectUIProvider !== 'undefined') {
+            if (typeof TonConnectUI !== 'undefined') {
                 try {
-                    const tonConnectUI = new TonConnectUIProvider({
+                    const tonConnectUI = new TonConnectUI({
                         manifestUrl: 'https://github.com/hoodrichbadass/website/blob/72500bb6b4990679f30f5563da271b15c0697e1f/tonconnect-manifest.json',
-                        uiPreferences: { theme: THEME.DARK },
+                        buttonRootId: 'ton-connect',
+                        uiPreferences: { theme: 'dark' },
                         walletsListConfiguration: {
                             includeWallets: [
                                 {
