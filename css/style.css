@@ -2,36 +2,35 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://brown-dear-tarsier-893.mypinata.cloud/ipfs/QmWpUE4w3BKjQ87pLaDypnPEmje7fXoHstHDkug6nuKizb'); /* Путь к вашей картинке */
-    background-size: contain; /* Изображение полностью помещается в фон */
-    background-repeat: no-repeat; /* Картинка не повторяется */
-    background-position: center center; /* Центрирование картинки */
-    height: 100vh; /* Высота окна просмотра */
+    background-image: url('https://brown-dear-tarsier-893.mypinata.cloud/ipfs/QmWpUE4w3BKjQ87pLaDypnPEmje7fXoHstHDkug6nuKizb');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 header, footer {
-    background-color: white; /* Белый фон */
+    background-color: white;
     text-align: center;
     padding: 1em 0;
-    width: 100%; /* Ширина 100% */
-    position: relative; /* Относительное позиционирование */
-    z-index: 1; /* Поверх фона */
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 main {
     padding: 1em;
-    flex: 1; /* Занимает оставшееся пространство */
-    position: relative; /* Относительное позиционирование */
-    z-index: 1; /* Поверх фона */
+    flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
-/* Стили для кнопки подключения кошелька */
 #ton-connect {
-    position: fixed; /* Фиксированное позиционирование */
+    position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 1000; /* Убедимся, что кнопка находится над другими элементами */
+    z-index: 1000;
 }
