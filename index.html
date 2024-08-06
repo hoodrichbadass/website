@@ -20,35 +20,25 @@
     <script type="module">
         import { TonConnectUI } from 'https://cdn.jsdelivr.net/npm/@tonconnect/ui@2.0.6/+esm';
 
-        document.addEventListener('DOMContentLoaded', async function() {
+        document.addEventListener('DOMContentLoaded', function() {
             console.log('TonConnectUI:', typeof TonConnectUI);
 
             if (typeof TonConnectUI !== 'undefined') {
                 try {
                     const tonConnectUI = new TonConnectUI({
                         manifestUrl: 'https://github.com/hoodrichbadass/website/blob/72500bb6b4990679f30f5563da271b15c0697e1f/tonconnect-manifest.json',
-                        buttonRootId: 'ton-connect',
-                        uiPreferences: { theme: 'dark' },
-                        walletsListConfiguration: {
-                            includeWallets: [
-                                {
-                                    appName: "telegram-wallet",
-                                    name: "Wallet",
-                                    imageUrl: "https://wallet.tg/images/logo-288.png",
-                                    aboutUrl: "https://wallet.tg/",
-                                    universalLink: "https://t.me/wallet/start",
-                                    bridgeUrl: "https://bridge.tonapi.io/bridge",
-                                    platforms: ["ios", "android", "macos", "windows", "linux"]
-                                }
-                            ]
-                        },
-                        actionsConfiguration: {
-                            twaReturnUrl: 'https://t.me/WebAppWalletBot/myapp',
-                            skipRedirectToWallet: 'ios'
-                        }
+                        buttonRootId: 'ton-connect'
                     });
 
                     console.log('TON Connect UI initialized');
+
+                    tonConnectUI.uiOptions = {
+                        twaReturnUrl: 'https://hoodrichbadass.github.io/website/',
+                        actionsConfiguration: {
+                            returnStrategy: 'none', // No return after user action, for better compatibility
+                            skipRedirectToWallet: 'ios' // Avoids redirect issues on iOS
+                        }
+                    };
 
                 } catch (error) {
                     console.error('Failed to initialize TON Connect UI:', error);
