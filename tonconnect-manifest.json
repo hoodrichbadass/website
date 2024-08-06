@@ -1,8 +1,8 @@
 {
-    "url": "http://127.0.0.1:5500",
+    "url": "https://hoodrichbadass.github.io/website/",
     "name": "My Awesome App",
-    "iconUrl": "http://127.0.0.1:5500/images/1.png",
-    "termsOfUseUrl": "http://127.0.0.1:5500/terms-of-use.html",
-    "privacyPolicyUrl": "http://127.0.0.1:5500/privacy-policy.html"
+    "iconUrl": "https://github.com/hoodrichbadass/website/blob/c1b20429e429b090387d2d01ca3d95c84bad873e/images/1.png",
+    "termsOfUseUrl": "https://github.com/hoodrichbadass/website/blob/c1b20429e429b090387d2d01ca3d95c84bad873e/terms-of-use.html",
+    "privacyPolicyUrl": "https://github.com/hoodrichbadass/website/blob/c1b20429e429b090387d2d01ca3d95c84bad873e/privacy-policy.html"
   }
   
